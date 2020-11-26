@@ -44,7 +44,7 @@ make clean
 
 ### 3. Changing the macros
 
-firewall.c file will contain these macros
+firewall.c file will contain these macros from line 7 to 13
 
 ```bash
 #define N (100)
