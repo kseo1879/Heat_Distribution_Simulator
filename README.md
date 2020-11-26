@@ -1,6 +1,6 @@
 # HEAT-DISTRIBUTION-SIMULATOR
 
-This is the submittion for HEAT-DISTRIBUTION Simulation SOFT3410 Assignment2
+This is the submittion for HEAT-DISTRIBUTION Simulation SOFT3410 Assignment2 Part 1
 
 By: Calvin Seo
 
