@@ -116,7 +116,7 @@ void iterate_2d(double* heat_points, double* temp_heat_points) {
 
     for (int iteration = 0; iteration < ITERATION; iteration++) {
                 
-        #pragma omp parallel for
+        #pragma omp parallel for //schedule(static)
         for (int i = 1; i < N - 1; i++) {
             for (int j = 1; j < N - 1; j++) {
                     g[i * N + j] = 0.25 * (h[((i - 1) * N) + j] + h[((i + 1) * N) + j] 
@@ -124,7 +124,7 @@ void iterate_2d(double* heat_points, double* temp_heat_points) {
             }       
         }
 
-        #pragma omp parallel for
+        #pragma omp parallel for //schedule(static)
         for (int i = 1; i < N - 1; i++) { 
             for (int j = 1; j < N - 1; j++) {
                 h[i * N + j] = g[i * N + j];
@@ -151,7 +151,7 @@ int iterate_3d(double* heat_points) {
             opp_index = 1;
         }
                 
-        #pragma omp parallel for
+        #pragma omp parallel for //schedule(static, 8)
         for (int i = 1; i < N - 1; i++) {
             for (int j = 1; j < N - 1; j++) {
                     h[i * 2 * N + (j * 2 + index)] = 0.25 * (h[((i - 1) * 2 * N) + (j * 2 + opp_index)] + h[((i + 1) * 2 * N) + (j * 2 + opp_index)] 
@@ -180,14 +180,14 @@ void print_heat_point_2d(double * heat_points) {
     }
 }
 
-
 void print_heat_point_3d(double * heat_points, int index) {
 
     int leap = N/PRINT;
     double *h = heat_points;
     int z = index;
 
-    printf("Printing for 3d implementation\n=============================\n\n");
+    printf("Printing for 2d implementation\n=============================\n\n");
+    // printf("Printing for 3d implementation Parallel\n=============================\n\n");
 
     for(int i = 0; i < N; i += leap) {
         printf("|");
