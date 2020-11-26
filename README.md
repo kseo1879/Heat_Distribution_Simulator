@@ -1,6 +1,6 @@
 # HEAT-DISTRIBUTION-SIMULATOR
 
-This is the submittion for N-Body Simulation SOFT3410 Assignment2
+This is the submittion for HEAT-DISTRIBUTION Simulation SOFT3410 Assignment2
 
 By: Calvin Seo
 
@@ -19,7 +19,7 @@ OR
 make firewall
 ```
 
-Now, You have two options here to test the program output.
+- Now, You have two options here to test the program output.
 
 ```bash
 make test_2d
@@ -30,6 +30,10 @@ make test_3d
 ```
 
 This will output the requirnment of 10 X 10 array of heat distribution. 
+
+2d will test it's result of implementing two, two dimentional array.
+
+3d will test it's result of implementing one, three dimentional array. 
 
 ### 2. To clean the directory
 
