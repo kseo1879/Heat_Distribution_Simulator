@@ -35,6 +35,12 @@ This will output the requirnment of 10 X 10 array of heat distribution.
 
 3d will test it's result of implementing one, three dimentional array. 
 
+- IMPORTANT: To manually run it make sure to add 2d or 3d flag just like this;
+```bash
+./firewall 2d
+./firewall 3d
+```
+
 ### 2. To clean the directory
 
 To clean the directory simply type

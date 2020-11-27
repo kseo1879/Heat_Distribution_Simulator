@@ -7,10 +7,10 @@ firewall: ./firewall.c
 	$(CC) $(CFLAGS) $^ -o $@
 
 test_2d:
-	time ./firewall 2d
+	./firewall 2d
 
 test_3d:
-	time ./firewall 3d
+	./firewall 3d
 
 clean:
 	rm -f *.o
